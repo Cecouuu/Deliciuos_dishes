@@ -37,4 +37,4 @@ async function makeArrayOfChosenDishName() {
 }
 submitDish.addEventListener(`click`, () =>{
     makeArrayOfChosenDishName();
-})a
+})
