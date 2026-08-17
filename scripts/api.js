@@ -27,4 +27,4 @@ export async function dishesArray(inputValue) {
         console.error("Request failed:", error.message);
         return null;
     }
-}
+}a
