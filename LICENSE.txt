@@ -1,0 +1,22 @@
+Copyright (c) 2026 Tsvetoslav Krumov
+
+All rights reserved.
+
+This project was created solely by Tsvetoslav Krumov.
+
+This source code is published for educational and portfolio purposes only.
+
+Permission is NOT granted to:
+
+• Copy this project
+• Redistribute this project
+• Modify and republish this project
+• Sell this project
+• Claim this project as your own
+
+You may view the source code for learning purposes only.
+
+If you wish to use any part of this project, written permission from the author is required.
+
+Author:
+Tsvetoslav Krumov
