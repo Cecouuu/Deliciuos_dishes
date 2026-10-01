@@ -13,12 +13,19 @@
 //     Unauthorized copying, redistribution or claiming this project as your own is prohibited.
 // --------------------------------------------------
 
+const matchingDishResults = document.querySelector("#matchingDishResults");
+const dishTextArea = document.querySelector("#dishTextArea");
+const submitDish = document.querySelector("#submitDish");
 
 async function FindDishByName(dishName){
     const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dishName}`);
     const dishes = await response.json();
     return dishes.meals;
 }
+
+submitDish.addEventListener(`click`, () =>{
+    dishTextArea.textContent = "";
+})
 
 async function makeArrayOfChosenDishName(dishes) {
     dishes = await FindDishByName("pork");
