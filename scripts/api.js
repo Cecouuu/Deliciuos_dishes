@@ -16,10 +16,13 @@
 
 async function FindDishByName(dishName){
     const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dishName}`);
-
     const dishes = await response.json();
-
-    console.log(`${dishes}`);
+    return dishes.meals;
 }
 
-FindDishByName("chicken");
+async function makeArrayOfChosenDishName(dishes) {
+    dishes = await FindDishByName("pork");
+    const dishesFromSpecificArea = dishes.filter(dish => dish.strArea === "United States").map(dish => dish.strMeal);
+    console.log(dishesFromSpecificArea);
+}
+makeArrayOfChosenDishName();
