@@ -2,7 +2,7 @@
 
 A recipe search app built with plain HTML, CSS, and JavaScript — browse dishes, view full recipe details, and (eventually) save favorites. This is a learning project, built step by step while studying JavaScript fundamentals (array methods, ES Modules, the Fetch API) before moving on to React.
 
-Second project in a personal portfolio series, following [Catch The Button](#) (a browser game built with vanilla JS).
+Second project in a personal portfolio series, following <a href="https://github.com/Cecouuu/Catch-the-button-game">Catch The Button</a> (a browser game built with vanilla JS).
 
 ## Status
 
