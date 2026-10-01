@@ -12,3 +12,14 @@
 //
 //     Unauthorized copying, redistribution or claiming this project as your own is prohibited.
 // --------------------------------------------------
+
+
+async function FindDishByName(dishName){
+    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dishName}`);
+
+    const dishes = await response.json();
+
+    console.log(`${dishes}`);
+}
+
+FindDishByName("chicken");

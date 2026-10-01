@@ -39,11 +39,6 @@ RecipeBookFinder/
 └── README.md
 ```
 
-## Running Locally
-
-1. Clone the repository
-2. Open `index.html` in a browser (or serve it with a local dev server, since ES Modules require `http://` rather than `file://` in most browsers)
-
 ## Credits
 
 Recipe data provided by [TheMealDB](https://www.themealdb.com/).
