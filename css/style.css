@@ -39,3 +39,45 @@ main{
     flex-direction: column;
     flex: 1;
 }
+.hero-container{
+    margin: 50px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    gap: 14px;
+}
+.submitDish{
+    background-color: aqua;
+    border: 1px solid #037373;
+    color: black;
+    border-radius: 14px;
+    width: 85px;
+    height: 35px;
+}
+.submitDish:active{
+    background-color: rgb(0 255 255 / 0.8);
+}
+.dishTextArea{
+    width: 175.25px;
+    height: 35px;
+    padding: 14px;
+    border-radius: 14px;
+    border: 0;
+}
+.dishTextArea:active{
+    border: 0;
+}
+.dishRespond{
+    border: 1px solid black;
+    border-radius: 14px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+}

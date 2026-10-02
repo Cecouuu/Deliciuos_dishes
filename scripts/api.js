@@ -16,20 +16,23 @@
 const matchingDishResults = document.querySelector("#matchingDishResults");
 const dishTextArea = document.querySelector("#dishTextArea");
 const submitDish = document.querySelector("#submitDish");
+let dishes;
+let dishesFromSpecificIngredient;
 
-async function FindDishByName(dishName){
-    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dishName}`);
+async function FindDishByName(){
+    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dishTextArea.value}`);
     const dishes = await response.json();
     return dishes.meals;
 }
-
-submitDish.addEventListener(`click`, () =>{
-    dishTextArea.textContent = "";
-})
-
-async function makeArrayOfChosenDishName(dishes) {
-    dishes = await FindDishByName("pork");
-    const dishesFromSpecificArea = dishes.filter(dish => dish.strArea === "United States").map(dish => dish.strMeal);
-    console.log(dishesFromSpecificArea);
+async function makeArrayOfChosenDishName() {
+    dishes = await FindDishByName(`${dishTextArea.value}`);
+    dishesFromSpecificIngredient = dishes.filter(dish => dish.strCategory === `${dishTextArea.value}`).map(dish => dish.strMeal);
+    console.log(dishesFromSpecificIngredient);
+    matchingDishResults.style.display = "flex";
+    dishesFromSpecificIngredient.forEach(dishes => {
+        matchingDishResults.append(dishes, document.createElement(`br`));
+    })
 }
-makeArrayOfChosenDishName();
+submitDish.addEventListener(`click`, () =>{
+    makeArrayOfChosenDishName();
+})

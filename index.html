@@ -7,6 +7,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Delicious Dishes</title>
+
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body style="background: gray">
@@ -14,12 +16,15 @@
     <header></header>
 
     <main>
-        <label for="dishTextArea">Search what product you have:</label>
-        <input type="text" id="dishTextArea" placeholder="Enter dish product">
-        <button id="submitDish"></button>
-        <div class="dishRespond">
-            <p id="matchingDishResults"></p>
+        <div class="hero-container">
+            <label for="dishTextArea">Search what product you have:</label>
+            <input type="text" class="dishTextArea" id="dishTextArea" placeholder="Enter dish product">
+            <button class="submitDish" id="submitDish">Search</button>
+            <div class="dishRespond">
+                <p id="matchingDishResults"></p>
+            </div>
         </div>
+
     </main>
 
     <footer></footer>
