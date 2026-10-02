@@ -16,8 +16,10 @@
 const matchingDishResults = document.querySelector("#matchingDishResults");
 const dishTextArea = document.querySelector("#dishTextArea");
 const submitDish = document.querySelector("#submitDish");
+const dishRespond = document.querySelector(".dishRespond");
 let dishes;
 let dishesFromSpecificIngredient;
+let dishesFromSpecificIngredientOldSearch;
 
 async function FindDishByName(){
     const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dishTextArea.value}`);
@@ -25,13 +27,13 @@ async function FindDishByName(){
     return dishes.meals;
 }
 async function makeArrayOfChosenDishName() {
-    dishes = await FindDishByName(`${dishTextArea.value}`);
-    dishesFromSpecificIngredient = dishes.filter(dish => dish.strCategory === `${dishTextArea.value}`).map(dish => dish.strMeal);
-    console.log(dishesFromSpecificIngredient);
-    matchingDishResults.style.display = "flex";
-    dishesFromSpecificIngredient.forEach(dishes => {
-        matchingDishResults.append(dishes, document.createElement(`br`));
-    })
+        dishes = await FindDishByName(`${dishTextArea.value}`);
+        dishesFromSpecificIngredient = dishes.filter(dish => dish.strCategory === `${dishTextArea.value}`).map(dish => dish.strMeal);
+        console.log(dishesFromSpecificIngredient);
+        dishRespond.style.display = "flex";
+        dishesFromSpecificIngredient.forEach(dishes => {
+        matchingDishResults.textContent(`${dishes} ${document.createElement(`br`)}`);
+        });
 }
 submitDish.addEventListener(`click`, () =>{
     makeArrayOfChosenDishName();
