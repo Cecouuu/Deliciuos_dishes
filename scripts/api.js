@@ -32,9 +32,15 @@ async function makeArrayOfChosenDishName() {
         console.log(dishesFromSpecificIngredient);
         dishRespond.style.display = "flex";
         dishesFromSpecificIngredient.forEach(dishes => {
-        matchingDishResults.append(`${dishes} ${document.createElement(`br`)}`);
+        matchingDishResults.replaceChildren(`${dishes} ${document.createElement(`br`)}`);
         });
 }
+function displayFoodsByEach(dishArray){
+    dishArray.forEach(dish => {
+        return "dish"
+    })
+}
+
 submitDish.addEventListener(`click`, () =>{
     makeArrayOfChosenDishName();
 })
