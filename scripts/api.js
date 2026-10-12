@@ -13,7 +13,6 @@
 //     Unauthorized copying, redistribution or claiming this project as your own is prohibited.
 // --------------------------------------------------
 
-const matchingDishResults = document.querySelector("#matchingDishResults");
 const dishTextArea = document.querySelector("#dishTextArea");
 const submitDish = document.querySelector("#submitDish");
 const dishRespond = document.querySelector(".dishRespond");
@@ -29,16 +28,11 @@ async function makeArrayOfChosenDishName() {
         dishes = await FindDishByName(`${dishTextArea.value}`);
         dishesFromSpecificIngredient = dishes.filter(dish => dish.strCategory === `${dishTextArea.value}`).map(dish => dish.strMeal);
         console.log(dishesFromSpecificIngredient);
-        dishRespond.style.visibility = ``;
+        dishRespond.style.visibility = `visible`;
         dishRespond.replaceChildren("");
         dishesFromSpecificIngredient.forEach(dish => {
             const divElement = document.createElement("div");
-            divElement.style.display = `flex`;
-            divElement.style.justifyContent = `center`;
-            divElement.style.alignItems = `center`;
-            divElement.style.border = `1px solid lime`;
-            divElement.style.width = `100px`;
-            divElement.style.height = `250px`;
+            divElement.classList.add("divElement")
 
             const node = document.createElement("p");
             node.textContent = `${dish}`;

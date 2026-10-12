@@ -75,9 +75,21 @@ main{
     border-radius: 14px;
     display: flex;
     visibility: hidden;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: clamp(280px, 100%, 80vw);
     min-height: 400px;
-    height: auto;
+    gap: 14px;
     padding: 10px;
+}
+
+.divElement {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border: 1px solid lime;
+    width: clamp(225px, 100px + 10vw, 400px);
+    height: clamp(100px, 100px + 10vh ,125px);
+    text-align: center;
 }
