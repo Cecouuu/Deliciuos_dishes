@@ -19,28 +19,33 @@ const dishRespond = document.querySelector(".dishRespond");
 let dishes;
 let dishesFromSpecificIngredient;
 
-async function FindDishByName(inputValue){
+async function dishesArray(inputValue){
     const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`);
     const dishes = await response.json();
     return dishes.meals;
 }
-async function makeArrayOfChosenDishName() {
-        dishes = await FindDishByName(`${dishTextArea.value}`);
-        dishesFromSpecificIngredient = dishes.filter(dish => dish.strCategory === `${dishTextArea.value}`).map(dish => dish.strMeal);
-        console.log(dishesFromSpecificIngredient);
+async function filterDishesFromSpecificIngredient() {
+        dishes = await dishesArray(`${dishTextArea.value}`);
+        dishesFromSpecificIngredient = dishes.filter(dish => dish.strCategory === `${dishTextArea.value}`);
         dishRespond.style.visibility = `visible`;
         dishRespond.replaceChildren("");
         dishesFromSpecificIngredient.forEach(dish => {
-            const divElement = document.createElement("div");
-            divElement.classList.add("divElement")
+            const cardBody = document.createElement("div");
+            cardBody.classList.add("cardBody")
 
-            const node = document.createElement("p");
-            node.textContent = `${dish}`;
-            divElement.appendChild(node);
-            dishRespond.appendChild(divElement);
+            const cardImage = document.createElement("img");
+            cardImage.src = `${dish.strMealThumb}`
+            cardImage.classList.add("cardImage");
+
+            const cardTitle = document.createElement("h1");
+            cardTitle.classList.add("cardTitle");
+            cardTitle.textContent = `${dish.strMeal}`;
+
+            cardBody.appendChild(cardImage, cardTitle);
+            dishRespond.appendChild(cardBody);
         })
 }
 
 submitDish.addEventListener(`click`, () =>{
-    makeArrayOfChosenDishName();
+    filterDishesFromSpecificIngredient();
 })

@@ -84,7 +84,7 @@ main{
     padding: 10px;
 }
 
-.divElement {
+.cardBody {
     display: flex;
     justify-content:center;
     align-items: center;
@@ -92,4 +92,7 @@ main{
     width: clamp(225px, 100px + 10vw, 400px);
     height: clamp(100px, 100px + 10vh ,125px);
     text-align: center;
+}
+.cardImage {
+
 }
