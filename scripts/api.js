@@ -13,7 +13,6 @@
 //     Unauthorized copying, redistribution or claiming this project as your own is prohibited.
 // --------------------------------------------------
 
-
 export async function dishesArray(inputValue){
     const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`);
     const dishArray = await response.json();

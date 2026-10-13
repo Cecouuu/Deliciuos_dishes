@@ -70,7 +70,7 @@ main{
 .dishTextArea:active{
     border: 0;
 }
-.dishRespond{
+.dishRespondBox{
     /*border: 1px solid black;*/
     /*border-radius: 14px;*/
     display: none;
@@ -81,6 +81,9 @@ main{
     min-height: 400px;
     gap: 14px;
     padding: 10px;
+}
+.dishRespondBoxActive{
+    display:flex;
 }
 
 .cardBody {
@@ -93,7 +96,7 @@ main{
     gap: 10px;
     padding: 5px 25px;
     width: clamp(225px, 200px + 15vw, 400px);
-    height: clamp(100px, 100px + 10vh , auto);
+    min-height: 100px;
     text-align: center;
 }
 .cardImage {

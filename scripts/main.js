@@ -13,7 +13,7 @@
 //     Unauthorized copying, redistribution or claiming this project as your own is prohibited.
 // --------------------------------------------------
 
+import {startingEvents} from "./events.js";
 
-import {startSearching} from "./events.js";
 
-startSearching();
+startingEvents();

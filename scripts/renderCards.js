@@ -13,33 +13,20 @@
 //     Unauthorized copying, redistribution or claiming this project as your own is prohibited.
 // --------------------------------------------------
 
-const dishTextArea = document.querySelector("#dishTextArea");
-const dishRespond = document.querySelector(".dishRespond");
-let dishes;
-let dishesFromSpecificIngredient;
+export function generateCard(dishRespondBox, dish){
+    const cardBody = document.createElement("div");
+    cardBody.classList.add("cardBody");
 
-import {dishesArray} from "./api.js"
+    const cardImage = document.createElement("img");
+    cardImage.src = dish.strMealThumb;
+    cardImage.alt = dish.strMeal;
+    cardImage.classList.add("cardImage");
 
-export async function filterDishesFromSpecificIngredient() {
-    dishes = await dishesArray(`${dishTextArea.value}`);
-    dishesFromSpecificIngredient = dishes.filter(dish => dish.strCategory === dishTextArea.value);
-    dishRespond.style.display = `flex`;
-    dishRespond.replaceChildren("");
-    dishesFromSpecificIngredient.forEach(dish => {
-        const cardBody = document.createElement("div");
-        cardBody.classList.add("cardBody");
+    const cardTitle = document.createElement("h1");
+    cardTitle.classList.add("cardTitle");
+    cardTitle.textContent = dish.strMeal;
 
-        const cardImage = document.createElement("img");
-        cardImage.src = dish.strMealThumb;
-        cardImage.alt = dish.strMeal;
-        cardImage.classList.add("cardImage");
-
-        const cardTitle = document.createElement("h1");
-        cardTitle.classList.add("cardTitle");
-        cardTitle.textContent = dish.strMeal;
-
-        cardBody.appendChild(cardImage);
-        cardBody.appendChild(cardTitle);
-        dishRespond.appendChild(cardBody);
-    })
+    cardBody.appendChild(cardImage);
+    cardBody.appendChild(cardTitle);
+    dishRespondBox.appendChild(cardBody);
 }
