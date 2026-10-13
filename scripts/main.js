@@ -12,3 +12,8 @@
 //
 //     Unauthorized copying, redistribution or claiming this project as your own is prohibited.
 // --------------------------------------------------
+
+
+import {startSearching} from "./events.js";
+
+startSearching();

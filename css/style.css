@@ -71,10 +71,9 @@ main{
     border: 0;
 }
 .dishRespond{
-    border: 1px solid black;
-    border-radius: 14px;
-    display: flex;
-    visibility: hidden;
+    /*border: 1px solid black;*/
+    /*border-radius: 14px;*/
+    display: none;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -88,11 +87,16 @@ main{
     display: flex;
     justify-content:center;
     align-items: center;
+    flex-direction: column;
     border: 1px solid lime;
-    width: clamp(225px, 100px + 10vw, 400px);
-    height: clamp(100px, 100px + 10vh ,125px);
+    border-radius: 5px;
+    gap: 10px;
+    padding: 5px 25px;
+    width: clamp(225px, 200px + 15vw, 400px);
+    height: clamp(100px, 100px + 10vh , auto);
     text-align: center;
 }
 .cardImage {
-
+    width: 100%;
+    height: auto;
 }

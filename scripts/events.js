@@ -12,3 +12,12 @@
 //
 //     Unauthorized copying, redistribution or claiming this project as your own is prohibited.
 // --------------------------------------------------
+
+const submitDish = document.querySelector("#submitDish");
+import {filterDishesFromSpecificIngredient} from "./renderCards.js";
+
+export async function startSearching () {
+    submitDish.addEventListener(`click`, () =>{
+        filterDishesFromSpecificIngredient();
+    })
+}
