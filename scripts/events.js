@@ -22,7 +22,7 @@ const dishRespondBox = document.querySelector(".dishRespondBox");
 
 async function filterDishesFromSpecificIngredient() {
     let dishes = await dishesArray(`${dishTextArea.value}`);
-    const dishesFromSpecificIngredient = dishes.filter(dish => dish.strCategory === dishTextArea.value);
+    const dishesFromSpecificIngredient = dishes.filter(dish => dish.strCategory.toLowerCase() === dishTextArea.value.toLowerCase());
     dishRespondBox.classList.add("dishRespondBoxActive");
     dishRespondBox.replaceChildren("");
     dishesFromSpecificIngredient.forEach(dish => {

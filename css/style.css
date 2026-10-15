@@ -92,7 +92,7 @@ main{
     align-items: center;
     flex-direction: column;
     border: 1px solid lime;
-    border-radius: 5px;
+    border-radius: 8px;
     gap: 10px;
     padding: 5px 25px;
     width: clamp(225px, 200px + 15vw, 400px);
