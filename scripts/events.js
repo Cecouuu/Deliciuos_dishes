@@ -21,13 +21,21 @@ const dishTextArea = document.querySelector("#dishTextArea");
 const dishRespondBox = document.querySelector(".dishRespondBox");
 
 async function filterDishesFromSpecificIngredient() {
-    let dishes = await dishesArray(`${dishTextArea.value}`);
-    const dishesFromSpecificIngredient = dishes.filter(dish => dish.strCategory.toLowerCase() === dishTextArea.value.toLowerCase());
-    dishRespondBox.classList.add("dishRespondBoxActive");
-    dishRespondBox.replaceChildren("");
-    dishesFromSpecificIngredient.forEach(dish => {
-        generateCard(dishRespondBox, dish);
-    })
+    try{
+        let dishes = await dishesArray(`${dishTextArea.value}`);
+
+        if (dishes === undefined || dishes === null){
+            throw new Error(`API has error ${dishesArray().status}`)
+        }
+        dishRespondBox.classList.add("dishRespondBoxActive");
+        dishRespondBox.replaceChildren("");
+        dishes.forEach(dish => {
+            generateCard(dishRespondBox, dish);
+        })
+    }catch (error){
+        console.error(error.message);
+    }
+
 }
 
 export function startingEvents () {
