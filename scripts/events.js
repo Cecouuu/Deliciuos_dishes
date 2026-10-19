@@ -22,18 +22,29 @@ const dishRespondBox = document.querySelector(".dishRespondBox");
 
 async function filterDishesFromSpecificIngredient() {
     try{
-        let dishes = await dishesArray(`${dishTextArea.value}`);
+        const dishes = await dishesArray(dishTextArea.value);
 
         if (dishes === undefined || dishes === null){
-            throw new Error(`API has error ${dishesArray().status}`)
+            throw new Error(`API has error ${dishes.status}`)
+        }
+        if (dishTextArea.value === ""){
+            dishRespondBox.classList.remove("dishRespondBoxActive");
+            return console.log("There is no match of what you are looking!");
         }
         dishRespondBox.classList.add("dishRespondBoxActive");
         dishRespondBox.replaceChildren("");
         dishes.forEach(dish => {
+            if (dish === null){
+                dishRespondBox.classList.remove("dishRespondBoxActive");
+                dishRespondBox.replaceChildren("");
+                return console.log("There is no match of what you are looking!");
+            }
             generateCard(dishRespondBox, dish);
         })
     }catch (error){
-        console.error(error.message);
+        const errorCaught = document.createElement("h1")
+        errorCaught.textContent = "Error appeared in API request!"
+        dishRespondBox.appendChild(errorCaught);
     }
 
 }

@@ -15,12 +15,12 @@
 
 export async function dishesArray(inputValue) {
     try {
-        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${inputValue.toLowerCase().replaceAll(" ", "_")}`);
-
+        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${inputValue.trim().toLowerCase().replaceAll(" ", "_")}`);
         if (!response.ok){
             throw new Error(`Server error ${response.status}`);
         }
         const dishArray = await response.json();
+        console.log(dishArray.meals);
         return dishArray.meals ?? [];
     }
     catch (error){
