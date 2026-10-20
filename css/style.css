@@ -103,3 +103,6 @@ main{
     width: 100%;
     height: auto;
 }
+#invalidInputResponse {
+    display: none;
+}

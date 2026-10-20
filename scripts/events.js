@@ -19,34 +19,47 @@ import {generateCard} from "./renderCards.js";
 const submitDish = document.querySelector("#submitDish");
 const dishTextArea = document.querySelector("#dishTextArea");
 const dishRespondBox = document.querySelector(".dishRespondBox");
+const heroContainer = document.querySelector("#hero-container")
+const invalidInputResponse = document.querySelector("#invalidInputResponse");
 
 async function filterDishesFromSpecificIngredient() {
     try{
         const dishes = await dishesArray(dishTextArea.value);
 
         if (dishes === undefined || dishes === null){
-            throw new Error(`API has error ${dishes.status}`)
+            throw new Error(`API has error ${dishes.status}`);
         }
+
         if (dishTextArea.value === ""){
+            invalidInputResponse.style.display = `flex`;
+            invalidInputResponse.textContent = "There is no match of what you are looking!";
+            heroContainer.appendChild(invalidInputResponse);
             dishRespondBox.classList.remove("dishRespondBoxActive");
             return console.log("There is no match of what you are looking!");
         }
         dishRespondBox.classList.add("dishRespondBoxActive");
         dishRespondBox.replaceChildren("");
+        invalidInputResponse.style.display = `none`;
         dishes.forEach(dish => {
             if (dish === null){
+                invalidInputResponse.style.display = `flex`;
+                invalidInputResponse.textContent = "There is no match of what you are looking!";
+                heroContainer.appendChild(invalidInputResponse);
                 dishRespondBox.classList.remove("dishRespondBoxActive");
-                dishRespondBox.replaceChildren("");
                 return console.log("There is no match of what you are looking!");
             }
-            generateCard(dishRespondBox, dish);
+            else{
+                generateCard(dishRespondBox, dish);
+            }
         })
-    }catch (error){
+    }
+    catch (error){
+        dishRespondBox.classList.remove("dishRespondBoxActive")
         const errorCaught = document.createElement("h1")
         errorCaught.textContent = "Error appeared in API request!"
-        dishRespondBox.appendChild(errorCaught);
+        dishRespondBox.classList.remove("dishRespondBoxActive");
+        heroContainer.appendChild(errorCaught);
     }
-
 }
 
 export function startingEvents () {
