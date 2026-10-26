@@ -66,4 +66,4 @@ export function startingEvents () {
     submitDish.addEventListener(`click`, () =>{
         filterDishesFromSpecificIngredient();
     })
-}a
+}
