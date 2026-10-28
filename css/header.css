@@ -81,4 +81,22 @@
 .saved-count{
     background: #ece8df;
     border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ham-menu{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background-color: #fbfaf7;
+}
+.ham-lines{
+    width: 3px;
+    height: 0.5px;
+    border: 1px solid var(--navy);
 }
