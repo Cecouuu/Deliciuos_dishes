@@ -1,0 +1,84 @@
+/*--------------------------------------------------*/
+/*Deliciuos dishes*/
+/*Created by Tsvetoslav Krumov*/
+/*2026*/
+
+/*Portfolio Project*/
+
+/*Copyright (c) 2026 Tsvetoslav Krumov*/
+/*All Rights Reserved.*/
+
+/*This project is published for educational and portfolio purposes only.*/
+
+/*Unauthorized copying, redistribution or claiming this project as your own is prohibited.*/
+/*--------------------------------------------------*/
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 clamp(30px, 7vw + 5px,  15vw);
+    width: 100vw;
+    height: clamp(75px, 25vh + 20px, 85px);
+    background-color: #fbfaf7;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--navy);
+    font-family: 'Libre Caslon Display', serif;
+    font-size: 42px;
+    letter-spacing: -1.7px;
+    line-height: 1;
+    font-weight: 200;
+}
+.logo-icon{
+    margin: 0 10px 5px 0;
+}
+.logo-dot{
+    color: var(--caramel);
+    margin: 0 0 0 3px;
+}
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 14.25px;
+}
+.nav-bar a{
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: #737773;
+    font-weight: 550;
+}
+.nav-bar a:hover{
+    color: #ac8050;
+}
+.saved-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: #fbfaf7;
+    gap: 7px;
+    color: var(--navy);
+    transition: 0.14s;
+}
+.saved-nav:hover{
+    transition: 0.14s;
+    transform: translateY(-2.5px);
+}
+.saved-nav svg{
+    width: 24px;
+    height: 24px;
+}
+.saved-count{
+    background: #ece8df;
+    border-radius: 50%;
+}
