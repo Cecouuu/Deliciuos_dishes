@@ -20,4 +20,7 @@
     .saved-text{
         display:none;
     }
+    .ham-menu{
+        display: flex;
+    }
 }
