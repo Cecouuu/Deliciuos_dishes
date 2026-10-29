@@ -15,10 +15,18 @@
 
 const hamOpenBtn = document.querySelector("#hamOpenBtn");
 const hamCloseBtn = document.querySelector("#hamCloseBtn");
+const hamMenuUI = document.querySelector("#hamMenuUI");
 
-
-hamOpenBtn.addEventListener(`click`, activeFunction)
-
+hamOpenBtn.addEventListener(`click`, activeFunction);
+hamCloseBtn.addEventListener(`click`, deActivatedFunction);
 function activeFunction(){
+    hamMenuUI.classList.add("activeHam");
+    hamOpenBtn.classList.remove("ham-active");
+    hamCloseBtn.classList.add("ham-active");
+}
+function deActivatedFunction(){
+    hamMenuUI.classList.remove("activeHam");
+    hamOpenBtn.classList.add("ham-active");
+    hamCloseBtn.classList.remove("ham-active");
 
 }

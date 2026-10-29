@@ -140,11 +140,14 @@
     display: flex;
 }
 .hamMenuUI{
-    display: flex;
+    display: none;
     width: 100vw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.activeHam{
+    display: flex;
 }
 .overLine{
     width: 97.25vw;
@@ -162,12 +165,13 @@
 }
 .ham-nav-bar a{
     width: 100%;
-    height: 45px;
+    height: 55px;
     padding: 0 0 0 35px;
+    margin: 5px 0 5px 0;
     text-decoration: none;
     color: #7a7d7b;
-    font-size: 16px;
-    font-family: 'DM Sans', sans-serif
+    font-size: 25px;
+    font-family: Arial Rounded MT Bold;
 }
 .ham-nav-bar a:hover{
     color: #ac8050;
