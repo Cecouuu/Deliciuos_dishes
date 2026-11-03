@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     color: #737773;
     font-weight: 550;
 }
@@ -84,6 +84,7 @@
     width: 20px;
     height: 20px;
     font-size: 12px;
+    font-family: 'DM Sans';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +100,7 @@
 }
 .ham-menu:hover{
     transition: 0.25s;
-    transform: translateY(-5px);
+    transform: translateY(-2.5px);
 }
 .ham-logo{
     background-color: #fbfaf7;
@@ -146,6 +147,7 @@
     align-items: center;
     flex-direction: column;
 }
+
 .activeHam{
     display: flex;
 }
