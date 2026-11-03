@@ -14,6 +14,8 @@
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/hero.css">
+        <link rel="stylesheet" href="css/catalog.css">
 
         <link rel="stylesheet" href="css/responsive.css">
     </head>
@@ -66,31 +68,42 @@
     </header>
 
     <main>
-
-        <div class="hero-container">
-            <div class="hero-tag">
-                <span></span>
-                <p>A LITTLE INSPIRATION. A LOT OF FLAVOR.</p>
-            </div>
-
-            <div class="hero-title">
-               <h1>Good food.
-                   Great moments.
-                   <span class="hero-title-colored">Made by you.</span></h1>
-            </div>
-            <div class="hero-description">
-                <p>Discover recipes worth slowing down for.
-                    From everyday favorites to your next great dish.</p>
-            </div>
-            <div class="hero-decoration">
-                <div class="hero-decorative-icons">
-                    <div class="hero-leaf"></div>
-                    <div class="hero-hat"></div>
-                    <div class="hero-heart"></div>
+        <section id="#home" class="hero">
+            <div class="hero-copy">
+                <div class="eyebrow">
+                    <span class="tiny-line"></span>
+                    A LITTLE INSPIRATION. A LOT OF FLAVOR.
                 </div>
-                <p>Thoughtfully curated. Joyfully cooked.</p>
+                <h1>Good food.<br>
+                    Great moments.<br>
+                    <em>Made by you.</em>
+                </h1>
+                <p>Discover recipes worth slowing down for.<br>From everyday favorites to your next great dish.</p>
+                <div class="hero-proof">
+                    <div class="proof-icons">
+                        <span>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M20 3C6 2 1 11 7 17s15-1 13-14Z"></path>
+                                <path d="M4 21 15 10"></path>
+                            </svg>
+                        </span>
+                        <span>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M7 15a5 5 0 1 1 1-9 5 5 0 0 1 8 0 5 5 0 1 1 1 9v6H7v-6Z"></path>
+                                <path d="M7 17h10"></path>
+                            </svg>
+                        </span>
+                        <span>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <span>Thoughtfully curated. Joyfully cooked.</span>
+                </div>
             </div>
-        </div>
+        </section>
+
 
 <!--        <div class="hero-container" id="hero-container">-->
 <!--            <label for="dishTextArea">Search the category you want:</label>-->
@@ -105,10 +118,31 @@
 <!--                <p id="matchingDishResults"></p>-->
 <!--            </div>-->
 <!--        </div>-->
+        <section class="philosophy section-wrap" id="our-story">
+            <div class="philosophy-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 3C6 2 1 11 7 17s15-1 13-14Z"></path>
+                    <path d="M4 21 15 10"></path>
+                </svg>
+            </div>
+            <div>
+                <div class="eyebrow">MORE THAN A RECIPE
+                </div>
+                <h2>A good meal is a little act of <em>love.</em></h2>
+                <p>We believe the best moments happen around the table. No complicated rules.<br>
+                    Just honest ingredients, a little curiosity, and the joy of making something your own.
+                </p>
+            </div>
+            <span class="philosophy-signature">Made to be savoured.</span>
+        </section>
 
     </main>
 
-    <footer></footer>
+    <footer>
+        <a href="#home" class="brand">savour<span class="brand-dot">.</span></a>
+        <span>Good food brings us together.</span>
+        <p>© 2026 Savour. A little taste of inspiration.</p>
+    </footer>
 
 </body>
 
