@@ -34,9 +34,6 @@
     --muted:#7a7d7b;
     --line:#e7e4dc
 }
-* {
-    box-sizing:border-box
-}
 html{
     scroll-behavior:smooth;
     scroll-padding-top:30px
@@ -48,14 +45,15 @@ body
 html{
     scrollbar-gutter: stable;
 }
-
-
 main{
     display: flex;
     flex-direction: column;
     flex: 1;
 }
-
+@keyframes rise {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
 /*.hero-container{*/
 /*    margin: 50px 0 0 0;*/
 /*    display: flex;*/

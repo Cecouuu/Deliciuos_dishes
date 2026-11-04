@@ -21,6 +21,7 @@
     width: 100vw;
     height: clamp(75px, 25vh + 20px, 85px);
     background-color: #fbfaf7;
+    z-index: 1000;
 }
 .logo{
     display: flex;
@@ -142,14 +143,17 @@
 }
 .hamMenuUI{
     display: none;
+    visibility: hidden;
     width: 100vw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
-
 .activeHam{
     display: flex;
+    visibility: visible;
+    animation: rise 1s ease both;
 }
 .overLine{
     width: 97.25vw;
@@ -177,4 +181,16 @@
 }
 .ham-nav-bar a:hover{
     color: #ac8050;
+}
+.ham-rising{
+
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*opacity: 0;*/
+    /*transform: translateY(25px);*/
+    /*transition: opacity 1.5s ease, transform 1.5s ease;*/
+}
+.ham-rising-active{
+    opacity: 1;
+    transform: translateY(0);
 }
