@@ -23,4 +23,16 @@
     .ham-menu{
         display: flex;
     }
+    .philosophy .eyebrow {
+        font-size: 9px;
+    }
+    h2 {
+        font-size: 40px;
+        line-height: 1.1;
+        overflow-wrap: anywhere;
+        margin: 14px 0;
+    }
+    .philosophy-signature{
+        display: none;
+    }
 }

@@ -24,11 +24,8 @@
 }
 
 :root{
-    font-family:'DM Sans',sans-serif;
     color:#172c3b;
     background:#fbfaf7;
-    font-synthesis:none;
-    font-weight:400;
     --navy:#142c3e;
     --caramel:#dbbc91;
     --muted:#7a7d7b;

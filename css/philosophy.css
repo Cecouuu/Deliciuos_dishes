@@ -1,0 +1,81 @@
+/*--------------------------------------------------*/
+/*Deliciuos dishes*/
+/*Created by Tsvetoslav Krumov*/
+/*2026*/
+
+/*Portfolio Project*/
+
+/*Copyright (c) 2026 Tsvetoslav Krumov*/
+/*All Rights Reserved.*/
+
+/*This project is published for educational and portfolio purposes only.*/
+
+/*Unauthorized copying, redistribution or claiming this project as your own is prohibited.*/
+/*--------------------------------------------------*/
+
+.philosophy{
+    width: 100%;
+    height: auto;
+    background-color: rgb(240, 236, 227);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 25px 14px;
+    gap: 20px;
+}
+.philosophy-grouper{
+    width: auto;
+    height: auto;
+    background-color: rgb(240, 236, 227);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 25px 14px;
+    gap: 20px;
+}
+.philosophy-icon{
+    width: clamp(50px, ;
+    height: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(115 87 56 / 0.8);
+    border: 1px solid rgb(193 173 144 / 0.6);
+    border-radius: 50%;
+}
+.eyebrow{
+    color: #9c8768;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 10px;
+    font-family: "Libre Caslon Display";;
+}
+.philosophy h2{
+    font-family: 'Libre Caslon Display';
+    font-weight: 400;
+    font-size: 34px;
+    letter-spacing: 0.5px;
+    line-height: 1.15;
+    margin: 13px 0 12px;
+}
+.philosophy h2 em{
+    color: var(--caramel);
+}
+.philosophy p{
+    color: rgb(136 139 127 / 0.8);
+    line-height: 1.8;
+    font-family: sans-serif;
+    text-align: start;
+    font-weight: 600;
+    font-size: 13px
+}
+.philosophy-signature{
+    width: fit-content;
+    margin: 20px 0;
+    color: rgb(156 135 104 / 0.75);
+    font-size: 22.25px;
+    transform: rotateZ(-7.5deg);
+}
