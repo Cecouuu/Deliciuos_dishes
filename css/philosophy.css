@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 25px 14px;
+    padding: 50px 28px;
     gap: 20px;
 }
 .philosophy-grouper{
@@ -31,12 +31,11 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding: 25px 14px;
     gap: 20px;
 }
 .philosophy-icon{
-    width: clamp(50px, ;
-    height: 50px;
+    width: clamp(50px, 10vw + 15px, 85px);
+    height: clamp(50px, 10vw + 15px, 85px);
     display:flex;
     align-items: center;
     justify-content: center;
