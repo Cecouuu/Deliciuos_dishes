@@ -12,3 +12,27 @@
 
 /*Unauthorized copying, redistribution or claiming this project as your own is prohibited.*/
 /*--------------------------------------------------*/
+
+footer{
+    display: flex;
+    min-width: 100%;
+    height: clamp(80px, 40vh + 15px, 125px);
+    flex-direction: row;
+    padding: 0 55px;
+}
+footer .logo{
+    font-size: 35px;
+}
+.footer-grouper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 25px;
+    color: rgb(122 125 123 / 0.8);
+    font-size: 13.25px;
+    font-family: sans-serif;
+}
+.footer-grouper p{
+    font-size: 0.6825rem;
+}

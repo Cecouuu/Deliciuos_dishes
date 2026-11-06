@@ -13,5 +13,29 @@
 /*Unauthorized copying, redistribution or claiming this project as your own is prohibited.*/
 /*--------------------------------------------------*/
 .hero{
-    background: red;
+    background-color: var(--navy);
+    color: #fbfaf7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+.hero-text{
+    padding: 25px;
+    width: 50%;
+}
+.eyebrow{
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.tiny-line{
+    width: 35px;
+    height: 1px;
+    background-color: #ac8050;
+}
+
+.hero-display{
+    width: 50%;
 }

@@ -37,9 +37,24 @@
     }
 }
 @media (max-width:  425px){
+    .header{
+        gap: 5px;
+    }
     .philosophy-signature{
         display: flex;
         width: 100%;
         justify-content: center;
+    }
+    footer{
+        flex-direction: column;
+        height: auto;
+        gap: 5px;
+        padding: 14px 0 25px 0;
+    }
+    .footer-grouper{
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 }
